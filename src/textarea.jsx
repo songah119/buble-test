@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect , useState, useRef} from "react";
 import styled from "styled-components";
 
-export default function DDDD() {
+export default function TextArea() {
   const [textList, setTextList]=useState([]); 
   const [pauseIdx, setPauseIdx]=useState([]);
   const inputRef = useRef("");
@@ -44,6 +44,8 @@ export default function DDDD() {
       if(startIdx === endIdx){//클릭 이벤트
         console.log("click event occurs");
         const selectedWord=e.target.value[startIdx]; //선택된 영역의 값 가져오기
+        console.log(selectedWord);
+
         if(selectedWord===" "){ //선택된 값이 빈칸이면 띄어쓰기 표시하는 함수 실행하기
           console.log("blankspace is selected");
           setPauseIdx(startIdx); //pause를 state 값에 저장하기
@@ -58,12 +60,11 @@ export default function DDDD() {
       }
     }
 
-    //빈칸을 문자 "/"로 바꾸기 
+    //빈칸을 문자 "/"로 바꾸기       //이거 안된대애애애ㅐ애~~~~~~~~~~~~~~~
     const replaceBlank = (e, startIdx) => {
       console.log(">>>>>>>>>",e.target.value[startIdx]);
-      console.log(inputRef.current.value[startIdx-1]);
-      inputRef.current.value[startIdx].replace("dddd");
-      e.target.value[startIdx]="dd"
+      console.log(typeof inputRef.current.value[startIdx]);
+      e.target.value[startIdx].val("dddd");
     }
 
   return (

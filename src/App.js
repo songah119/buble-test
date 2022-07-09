@@ -1,10 +1,11 @@
-import DDDD from "./dddd";
-// import Main from "./main";
+import Textarea from "./textarea";
+import Div from "./contentEditable";
 
 function App() {
   return (
     <div className="App">
-      <DDDD/>
+      {/* <Textarea/> */}
+      <Div/>
     </div>
   );
 }
