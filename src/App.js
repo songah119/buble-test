@@ -1,11 +1,13 @@
 import Textarea from "./textarea";
-import Div from "./contentEditable";
+import DivText from "./divText";
+import DivImg from "./divImg"
 
 function App() {
   return (
     <div className="App">
       {/* <Textarea/> */}
-      <Div/>
+      {/* <DivText/> */}
+      <DivImg/>
     </div>
   );
 }
