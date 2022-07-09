@@ -35,8 +35,8 @@ function ContentEdit() {
     const range = selection.getRangeAt(0); // 커서의 startOffset과 endOffset을 갖고 있는 객체이다.
     // console.log(range.startOffset); // 문장 별 커서의 start 위치 가리킴.
     // console.log(range.endOffset); // 문장 별 커서의 start 위치 가리킴.
-    const boundingClientRect = range.getBoundingClientRect(); //화면 내에서 커서 좌표
-    console.log(boundingClientRect);
+    const boundingClientRect = range.getBoundingClientRect(); //화면 내에서 커서 좌표 
+    console.log(boundingClientRect);//와 이거 미디어 쿼리 박살난다 ... 결론 -> 이거 안됨
 
     const startIdx=range.startOffset; // 커서의 시작인덱스
     const endIdx=range.endOffset; // 커서의 종료인덱스
@@ -49,7 +49,7 @@ function ContentEdit() {
       if(selectedWord===" "){ //선택된 값이 빈칸이면 띄어쓰기 표시하는 함수 실행하기
         console.log("blankspace is selected");
         setPauseIdx(startIdx); //pause를 state 값에 저장하기
-        replaceBlank(wholeText,startIdx,"/ "); //텍스트를 바꾸는 방법 전체 텍스트를 갈아엎어야 함..
+        //여기서 이미지 추가하는 함수 호출
       }
     } 
 
@@ -60,13 +60,8 @@ function ContentEdit() {
     }
   }
 
-  //원하는 위치에 이미지 딱 넣는 거 
-  const replaceBlank = (input, index, character) => {
-    console.log("대체!");
-    // console.log(input);
-    // console.log(index);
-    // console.log(character);
-    setWholeText(input.substr(0, index) + character + input.substr((index-1)+character.length));
+  //원하는 위치에 에셋 이미지 딱 넣는 거 
+  const replaceBlank = () => {
   }
 
 
