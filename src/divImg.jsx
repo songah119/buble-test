@@ -60,7 +60,7 @@ function ContentEdit() {
     }
   }
 
-  //원하는 위치에 에셋 이미지 딱 넣는 거 
+  //원하는 위치에 에셋 이미지 넣는 거 
   const replaceBlank = () => {
   }
 
